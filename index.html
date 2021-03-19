@@ -5,29 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="myjscode.js"></script>
     <title>Login Validation</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Login Page</h1>
-        <label>Name</label>
-        <input type="text" id="name" required> <br>
+    <form class="container" action="#" onsubmit="return false;">
+        <h1 class="heading">Login Page</h1>
+        <label for="name">Name</label>
+        <input type="text" id="name" onchange="checkName()" required>
+        <p id=name-p></p>
 
-        <label>Email:</label>
-        <input type="text" id="email" required> <br>
+        <label for="email">Email</label>
+        <input type="text" id="email" required>
+        <p id="email-p"></p>
 
-        <label>Password</label>
-        <input type="password" id="password" required> <br>
+        <label for="password">Password</label>
+        <input type="password" id="password" onchange="checkPassword()" required>
+        <p id="password-p"></p>
 
-        <label>Confirm_Password:</label>
-        <input type="password" id="confirm_password" required> <br>
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm-password" onchange="checkConfirmPassword()" required>
+        <p id="confirm-password-p"></p>
 
-        <button onclick="submit_()">Submit</button>
-    </div>
+        <button type="submit" id="submit-form" onclick="submit()">Submit</button>
+    </form>
 </body>
 
 </html>
